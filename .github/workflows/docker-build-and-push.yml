@@ -3,7 +3,7 @@ name: Inference Service Unit Testing and Build and Push Docker Image to Docker H
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   DOCKER_USER: ${{secrets.DOCKERHUB_USERNAME}}
