@@ -78,7 +78,7 @@ def healthcheck() -> dict[str, str]:
 
 @app.post("/predictions")
 async def predictions_api(data: CombinedData) -> dict[str, str]:
-    """Возвращает результат предсказания модели для in_data."""
+    """Возвращает результаты предсказания модели для in_data."""
     instance = data.instance
     client = data.client
 
