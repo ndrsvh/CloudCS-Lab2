@@ -82,7 +82,7 @@ async def predictions_api(data: CombinedData) -> dict[str, str]:
     instance = data.instance
     client = data.client
 
-    base_url = "https://keycloak-service:8443"
+    base_url = os.getenv("KEYCLOAK_URL")
     realm_path = "/realms/inference"
     token_path = "/protocol/openid-connect/token"
     url = base_url + realm_path + token_path
